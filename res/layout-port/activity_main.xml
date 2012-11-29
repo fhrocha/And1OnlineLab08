@@ -12,12 +12,4 @@
         android:layout_weight="1" >
     </fragment>
 
-    <fragment
-        android:id="@+id/course_detail_fragment"
-        android:name="br.com.globalcode.android.CourseDetailFragment"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="3" >
-    </fragment>
-
 </LinearLayout>
