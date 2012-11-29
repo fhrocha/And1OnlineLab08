@@ -17,18 +17,16 @@ public class CourseDetailFragment extends Fragment {
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 
-		final View view = inflater.inflate(R.layout.course_detail_fragment,
+		View view = inflater.inflate(R.layout.course_detail_fragment,
 				container, false);
 
-		TextView textViewCourseDetail = (TextView) view
-				.findViewById(R.id.textViewCourseDetail);
+		((TextView) view.findViewById(R.id.textViewCourseDetail))
+				.setOnClickListener(new OnClickListener() {
 
-		textViewCourseDetail.setOnClickListener(new OnClickListener() {
-
-			public void onClick(View v) {
-				showSimpleTextDialogFragment();
-			}
-		});
+					public void onClick(View v) {
+						showSimpleTextDialogFragment();
+					}
+				});
 
 		return view;
 	}
@@ -43,9 +41,9 @@ public class CourseDetailFragment extends Fragment {
 	}
 
 	public void setText(String texto) {
-		TextView textoTextView = (TextView) getView().findViewById(
-				R.id.textViewCourseDetail);
-		textoTextView.setText(texto);
+
+		((TextView) getView().findViewById(R.id.textViewCourseDetail))
+				.setText(texto);
 	}
 
 }

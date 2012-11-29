@@ -27,12 +27,14 @@ public class ListViewCoursesFragment extends ListFragment {
 		super.onListItemClick(l, v, position, id);
 		
 		CourseDetailFragment detailFragment = (CourseDetailFragment) getFragmentManager()
-				.findFragmentById(R.id.course_detail_fragment);
+				.findFragmentById(R.id.courseDetailFragment);
 		
 		String item = (String) getListAdapter().getItem(position);
 		if(detailFragment != null && detailFragment.isInLayout()) {
+
 			detailFragment.setText(item);
 		} else {
+			
 			Intent intent = new Intent(getActivity(), CourseDetailActivity.class);
 			intent.putExtra("value", item);
 			startActivity(intent);
